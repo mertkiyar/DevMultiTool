@@ -22,7 +22,7 @@ struct SettingsView: View {
 struct GeneralSettingsView: View {
     @AppStorage("appTheme") private var appTheme: Int = 0
     @AppStorage("pinPopover") private var pinPopover: Bool = false
-    @State private var launchAtLogin: Bool = SMAppService.mainApp.status == .enabled
+    @AppStorage("launchAtLogin") private var launchAtLogin: Bool = false
     @State private var showResetAlert = false
     @StateObject private var prefManager = PreferenceManager.shared
     
@@ -58,7 +58,8 @@ struct GeneralSettingsView: View {
                             }
                         } catch {
                             print("SMAppService Error: \(error)")
-                            launchAtLogin = SMAppService.mainApp.status == .enabled
+                            // Uygulama henüz Applications klasöründe olmadığı için (Geliştirme ortamı) hata verebilir.
+                            // Kullanıcının tercihini silmemek için UI toggle'ı geri almıyoruz.
                         }
                     }
             }
@@ -93,12 +94,6 @@ struct GeneralSettingsView: View {
                 },
                 secondaryButton: .cancel()
             )
-        }
-        .onAppear {
-            let isEnabled = SMAppService.mainApp.status == .enabled
-            if launchAtLogin != isEnabled {
-                launchAtLogin = isEnabled
-            }
         }
     }
 }
