@@ -20,48 +20,53 @@ struct ContentView: View {
             if showHistory {
                 HistoryView(showHistory: $showHistory)
                     .transition(.move(edge: .bottom))
+                    .id("history-view")
             } else if selectedToolID == nil {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.secondary)
-                    TextField("Search tools...", text: $searchText)
-                        .textFieldStyle(PlainTextFieldStyle())
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        withAnimation {
-                            showHistory.toggle()
-                            selectedToolID = nil
+                VStack(spacing: 0) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.secondary)
+                        TextField("Search tools...", text: $searchText)
+                            .textFieldStyle(PlainTextFieldStyle())
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            withAnimation {
+                                showHistory.toggle()
+                                selectedToolID = nil
+                            }
+                        }) {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .font(.system(size: 16))
                         }
-                    }) {
-                        Image(systemName: "clock.arrow.circlepath")
-                            .font(.system(size: 16))
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .help("History")
-                }
-                .padding()
-                .background(Color(NSColor.controlBackgroundColor))
-                
-                Divider()
-                
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 8) {
-                        ForEach(filteredTools, id: \.id) { tool in
-                            ToolRowView(tool: tool)
-                                .onHover { isHovered in
-                                    // İsteğe bağlı: Hover efekti
-                                }
-                                .onTapGesture {
-                                    withAnimation(.spring()) {
-                                        selectedToolID = tool.id
-                                    }
-                                }
-                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .help("History")
                     }
                     .padding()
+                    .background(Color(NSColor.controlBackgroundColor))
+                    
+                    Divider()
+                    
+                    ScrollView {
+                        LazyVStack(alignment: .leading, spacing: 8) {
+                            ForEach(filteredTools, id: \.id) { tool in
+                                ToolRowView(tool: tool)
+                                    .onHover { isHovered in
+                                        // İsteğe bağlı: Hover efekti
+                                    }
+                                    .onTapGesture {
+                                        withAnimation(.spring()) {
+                                            selectedToolID = tool.id
+                                        }
+                                    }
+                            }
+                        }
+                        .padding()
+                    }
                 }
+                .transition(.move(edge: .leading))
+                .id("main-list")
             } else {
                 if let tool = registry.tools.first(where: { $0.id == selectedToolID }) {
                     VStack(alignment: .leading, spacing: 0) {
@@ -93,6 +98,7 @@ struct ContentView: View {
                             .padding()
                     }
                     .transition(.move(edge: .trailing))
+                    .id("detail-view-\(tool.id)")
                 }
             }
         }
