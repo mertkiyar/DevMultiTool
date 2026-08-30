@@ -8,5 +8,6 @@ class ToolRegistry: ObservableObject {
         tools.append(Base64ConverterTool())
         tools.append(SampleTextTool())
         tools.append(JSONToCSVTool())
+        tools.append(JSONFillerTool())
     }
 }
