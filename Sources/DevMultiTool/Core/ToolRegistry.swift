@@ -17,5 +17,6 @@ class ToolRegistry: ObservableObject {
         tools.append(HashGeneratorTool())
         tools.append(StringInspectorTool())
         tools.append(NetworkInfoTool())
+        tools.append(URLParserTool())
     }
 }
