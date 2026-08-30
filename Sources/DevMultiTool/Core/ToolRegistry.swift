@@ -1,0 +1,12 @@
+import Foundation
+
+class ToolRegistry: ObservableObject {
+    @Published var tools: [any DeveloperTool] = []
+    
+    init() {
+        tools.append(UUIDGeneratorTool())
+        tools.append(Base64ConverterTool())
+        tools.append(SampleTextTool())
+        tools.append(JSONToCSVTool())
+    }
+}
