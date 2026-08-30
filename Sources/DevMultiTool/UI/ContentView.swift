@@ -72,19 +72,36 @@ struct ContentView: View {
                     List {
                         if !favoriteTools.isEmpty {
                             Section(header: Text("Favorites").font(.caption).foregroundColor(.secondary)) {
-                                ForEach(favoriteTools, id: \.id) { tool in
-                                    ToolRowView(tool: tool, isFavoriteSection: true)
-                                        .onTapGesture {
-                                            prefManager.incrementUsage(for: tool.id)
-                                            withAnimation(.spring()) {
-                                                selectedToolID = tool.id
-                                            }
+                                if searchText.isEmpty {
+                                    ForEach(prefManager.favoriteToolIDs, id: \.self) { toolID in
+                                        if let tool = registry.tools.first(where: { $0.id == toolID }) {
+                                            ToolRowView(tool: tool, isFavoriteSection: true)
+                                                .onTapGesture {
+                                                    prefManager.incrementUsage(for: tool.id)
+                                                    withAnimation(.spring()) {
+                                                        selectedToolID = tool.id
+                                                    }
+                                                }
+                                                .listRowBackground(Color.clear)
+                                                .listRowSeparator(.hidden)
+                                                .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
                                         }
-                                        .listRowBackground(Color.clear)
-                                        .listRowSeparator(.hidden)
-                                        .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                                    }
+                                    .onMove(perform: prefManager.moveFavorites)
+                                } else {
+                                    ForEach(favoriteTools, id: \.id) { tool in
+                                        ToolRowView(tool: tool, isFavoriteSection: false)
+                                            .onTapGesture {
+                                                prefManager.incrementUsage(for: tool.id)
+                                                withAnimation(.spring()) {
+                                                    selectedToolID = tool.id
+                                                }
+                                            }
+                                            .listRowBackground(Color.clear)
+                                            .listRowSeparator(.hidden)
+                                            .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                                    }
                                 }
-                                .onMove(perform: searchText.isEmpty ? prefManager.moveFavorites : nil)
                             }
                         }
                         
