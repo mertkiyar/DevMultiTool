@@ -9,5 +9,6 @@ class ToolRegistry: ObservableObject {
         tools.append(SampleTextTool())
         tools.append(JSONToCSVTool())
         tools.append(JSONFillerTool())
+        tools.append(JWTDecoderTool())
     }
 }
