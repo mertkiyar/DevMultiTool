@@ -6,11 +6,6 @@ struct DevMultiToolApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        MenuBarExtra("DevMultiTool", systemImage: "hammer.fill") {
-            ContentView()
-        }
-        .menuBarExtraStyle(.window)
-        
         Settings {
             SettingsView()
         }
@@ -18,7 +13,57 @@ struct DevMultiToolApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var statusItem: NSStatusItem!
+    var popover: NSPopover!
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
+        
+        popover = NSPopover()
+        popover.contentSize = NSSize(width: 420, height: 500)
+        popover.behavior = .transient
+        popover.contentViewController = NSHostingController(rootView: ContentView())
+        
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        
+        if let button = statusItem.button {
+            button.image = NSImage(systemSymbolName: "hammer.fill", accessibilityDescription: "DevMultiTool")
+            button.action = #selector(togglePopover(_:))
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+        }
+    }
+    
+    @objc func togglePopover(_ sender: NSStatusBarButton) {
+        guard let event = NSApp.currentEvent else { return }
+        
+        if event.type == .rightMouseUp {
+            let menu = NSMenu()
+            menu.addItem(NSMenuItem(title: "Settings...", action: #selector(showSettings), keyEquivalent: ","))
+            menu.addItem(NSMenuItem.separator())
+            menu.addItem(NSMenuItem(title: "Quit DevMultiTool", action: #selector(quitApp), keyEquivalent: "q"))
+            
+            statusItem.menu = menu
+            statusItem.button?.performClick(nil)
+            statusItem.menu = nil
+        } else {
+            if popover.isShown {
+                popover.performClose(sender)
+            } else {
+                popover.show(relativeTo: sender.bounds, of: sender, preferredEdge: .minY)
+                popover.contentViewController?.view.window?.makeKey()
+            }
+        }
+    }
+    
+    @objc func showSettings() {
+        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+        if popover.isShown {
+            popover.performClose(nil)
+        }
+        NSApp.activate(ignoringOtherApps: true)
+    }
+    
+    @objc func quitApp() {
+        NSApplication.shared.terminate(nil)
     }
 }
