@@ -73,7 +73,7 @@ struct ContentView: View {
                         if !favoriteTools.isEmpty {
                             Section(header: Text("Favorites").font(.caption).foregroundColor(.secondary)) {
                                 ForEach(favoriteTools, id: \.id) { tool in
-                                    ToolRowView(tool: tool)
+                                    ToolRowView(tool: tool, isFavoriteSection: true)
                                         .onTapGesture {
                                             prefManager.incrementUsage(for: tool.id)
                                             withAnimation(.spring()) {
@@ -84,7 +84,7 @@ struct ContentView: View {
                                         .listRowSeparator(.hidden)
                                         .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
                                 }
-                                .onMove(perform: prefManager.moveFavorites)
+                                .onMove(perform: searchText.isEmpty ? prefManager.moveFavorites : nil)
                             }
                         }
                         
@@ -178,9 +178,17 @@ struct ContentView: View {
 struct ToolRowView: View {
     let tool: any DeveloperTool
     @ObservedObject var prefManager = PreferenceManager.shared
+    var isFavoriteSection: Bool = false
     
     var body: some View {
         HStack {
+            if isFavoriteSection && prefManager.favoriteToolIDs.count > 1 {
+                Image(systemName: "line.3.horizontal")
+                    .foregroundColor(.secondary.opacity(0.5))
+                    .font(.system(size: 14))
+                    .padding(.trailing, 2)
+            }
+            
             Image(systemName: tool.iconName)
                 .frame(width: 30)
                 .foregroundColor(.blue)

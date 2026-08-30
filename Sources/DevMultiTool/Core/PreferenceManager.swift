@@ -33,7 +33,9 @@ class PreferenceManager: ObservableObject {
     }
     
     func moveFavorites(from source: IndexSet, to destination: Int) {
-        favoriteToolIDs.move(fromOffsets: source, toOffset: destination)
+        var copy = favoriteToolIDs
+        copy.move(fromOffsets: source, toOffset: destination)
+        favoriteToolIDs = copy
     }
     
     func isFavorite(_ toolID: String) -> Bool {
