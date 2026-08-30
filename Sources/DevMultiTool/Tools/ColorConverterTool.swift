@@ -36,7 +36,6 @@ struct ColorConverterView: View {
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary.opacity(0.3)))
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(8)
             
             Divider()

@@ -65,7 +65,6 @@ struct ContentView: View {
                         .help("History")
                     }
                     .padding()
-                    .background(Color(NSColor.controlBackgroundColor))
                     
                     Divider()
                     
@@ -150,7 +149,6 @@ struct ContentView: View {
                             Spacer()
                         }
                         .padding()
-                        .background(Color(NSColor.controlBackgroundColor))
                         
                         Divider()
                         
@@ -218,7 +216,7 @@ struct ToolRowView: View {
                 .font(.system(size: 12))
         }
         .padding(12)
-        .background(Color(NSColor.controlBackgroundColor).opacity(0.8))
+        .background(Color.primary.opacity(0.05))
         .cornerRadius(8)
         .contentShape(Rectangle())
     }

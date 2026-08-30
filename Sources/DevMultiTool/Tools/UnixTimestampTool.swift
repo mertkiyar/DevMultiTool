@@ -43,7 +43,6 @@ struct UnixTimestampView: View {
                 .foregroundColor(.blue)
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(8)
             .onReceive(timer) { _ in
                 currentTimestamp = Int(Date().timeIntervalSince1970)

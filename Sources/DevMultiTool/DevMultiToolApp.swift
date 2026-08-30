@@ -20,11 +20,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         
+        let hostingController = NSHostingController(rootView: ContentView())
+        hostingController.preferredContentSize = NSSize(width: 420, height: 500)
+        
         popover = NSPopover()
         popover.contentSize = NSSize(width: 420, height: 500)
         popover.behavior = .transient
-        popover.animates = false // Prevent jumping animations on macOS 14+ when opening
-        popover.contentViewController = NSHostingController(rootView: ContentView())
+        popover.contentViewController = hostingController
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
