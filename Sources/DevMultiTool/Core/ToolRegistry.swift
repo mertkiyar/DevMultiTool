@@ -13,5 +13,6 @@ class ToolRegistry: ObservableObject {
         tools.append(UnixTimestampTool())
         tools.append(URLEncoderTool())
         tools.append(ColorConverterTool())
+        tools.append(JSONFormatterTool())
     }
 }
