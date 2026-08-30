@@ -11,5 +11,6 @@ class ToolRegistry: ObservableObject {
         tools.append(JSONFillerTool())
         tools.append(JWTDecoderTool())
         tools.append(UnixTimestampTool())
+        tools.append(URLEncoderTool())
     }
 }
