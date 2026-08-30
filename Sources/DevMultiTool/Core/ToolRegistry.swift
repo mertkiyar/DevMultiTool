@@ -18,5 +18,6 @@ class ToolRegistry: ObservableObject {
         tools.append(StringInspectorTool())
         tools.append(NetworkInfoTool())
         tools.append(URLParserTool())
+        tools.append(NumberBaseConverterTool())
     }
 }
