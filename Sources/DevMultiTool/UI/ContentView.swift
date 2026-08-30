@@ -7,6 +7,8 @@ struct ContentView: View {
     
     @State private var showHistory = false
     
+    @AppStorage("appTheme") private var appTheme: Int = 0 // 0: System, 1: Light, 2: Dark
+    
     var filteredTools: [any DeveloperTool] {
         if searchText.isEmpty {
             return registry.tools
@@ -30,6 +32,15 @@ struct ContentView: View {
                             .textFieldStyle(PlainTextFieldStyle())
                         
                         Spacer()
+                        
+                        Button(action: {
+                            appTheme = (appTheme + 1) % 3
+                        }) {
+                            Image(systemName: themeIcon)
+                                .font(.system(size: 16))
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .help("Change Theme")
                         
                         Button(action: {
                             withAnimation {
@@ -103,6 +114,15 @@ struct ContentView: View {
             }
         }
         .frame(width: 420, height: 500)
+        .preferredColorScheme(appTheme == 1 ? .light : (appTheme == 2 ? .dark : nil))
+    }
+    
+    private var themeIcon: String {
+        switch appTheme {
+        case 1: return "sun.max"
+        case 2: return "moon.fill"
+        default: return "circle.lefthalf.filled"
+        }
     }
 }
 
