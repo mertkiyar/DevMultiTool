@@ -44,7 +44,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/ColorConverterTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/HashGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFormatterTool.swift"
         },
         {
           "kind" : "file",
@@ -52,11 +64,23 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JWTDecoderTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift"
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/URLEncoderTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UnixTimestampTool.swift"
         },
         {
           "kind" : "file",
@@ -84,10 +108,16 @@
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ToolRegistry.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DevMultiToolApp.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.swift.o",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryView.swift.o"
       ],
@@ -165,7 +195,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.swift.o"
         },
         {
           "kind" : "file",
@@ -173,11 +215,23 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o"
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.swift.o"
         },
         {
           "kind" : "file",
@@ -199,10 +253,16 @@
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/ColorConverterTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/HashGeneratorTool.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFormatterTool.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JWTDecoderTool.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/URLEncoderTool.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UnixTimestampTool.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift",
         "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift"
       ],
@@ -226,10 +286,16 @@
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/ColorConverterTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/HashGeneratorTool.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFormatterTool.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JWTDecoderTool.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/URLEncoderTool.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UnixTimestampTool.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift",
       "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift",
       "-I",
@@ -346,7 +412,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/ColorConverterTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/HashGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFormatterTool.swift"
         },
         {
           "kind" : "file",
@@ -354,11 +432,23 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JWTDecoderTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift"
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/URLEncoderTool.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UnixTimestampTool.swift"
         },
         {
           "kind" : "file",
@@ -384,6 +474,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.swift.o"
         },
         {
@@ -393,6 +487,10 @@
         {
           "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DeveloperTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.swift.o"
         },
         {
           "kind" : "file",
@@ -408,7 +506,15 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.swift.o"
         },
         {
           "kind" : "file",
@@ -420,7 +526,15 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.swift.o"
         }
       ],
       "outputFilePath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.product/Objects.LinkFileList"

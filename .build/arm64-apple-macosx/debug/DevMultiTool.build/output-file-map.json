@@ -37,12 +37,33 @@
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.dia"
   },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/ColorConverterTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ColorConverterTool.dia"
+  },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/HashGeneratorTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HashGeneratorTool.dia"
+  },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.d",
     "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swift.o",
     "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool~partial.swiftmodule",
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.dia"
+  },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFormatterTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFormatterTool.dia"
   },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.d",
@@ -51,6 +72,13 @@
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.dia"
   },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JWTDecoderTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JWTDecoderTool.dia"
+  },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.d",
     "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o",
@@ -58,12 +86,26 @@
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.dia"
   },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/URLEncoderTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/URLEncoderTool.dia"
+  },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.d",
     "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o",
     "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool~partial.swiftmodule",
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.dia"
+  },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UnixTimestampTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UnixTimestampTool.dia"
   },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.d",

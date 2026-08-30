@@ -9,12 +9,22 @@ struct ContentView: View {
     
     @AppStorage("appTheme") private var appTheme: Int = 0 // 0: System, 1: Light, 2: Dark
     
-    var filteredTools: [any DeveloperTool] {
-        if searchText.isEmpty {
-            return registry.tools
-        } else {
-            return registry.tools.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+    @StateObject private var prefManager = PreferenceManager.shared
+    
+    var sortedAllTools: [any DeveloperTool] {
+        let tools = registry.tools.filter { searchText.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(searchText) }
+        return tools.sorted {
+            let count1 = prefManager.toolUsageCounts[$0.id] ?? 0
+            let count2 = prefManager.toolUsageCounts[$1.id] ?? 0
+            if count1 == count2 { return $0.name < $1.name }
+            return count1 > count2
         }
+    }
+    
+    var favoriteTools: [any DeveloperTool] {
+        prefManager.favoriteToolIDs.compactMap { id in
+            registry.tools.first(where: { $0.id == id })
+        }.filter { searchText.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(searchText) }
     }
     
     var body: some View {
@@ -59,22 +69,45 @@ struct ContentView: View {
                     
                     Divider()
                     
-                    ScrollView {
-                        LazyVStack(alignment: .leading, spacing: 8) {
-                            ForEach(filteredTools, id: \.id) { tool in
-                                ToolRowView(tool: tool)
-                                    .onHover { isHovered in
-                                        // İsteğe bağlı: Hover efekti
-                                    }
-                                    .onTapGesture {
-                                        withAnimation(.spring()) {
-                                            selectedToolID = tool.id
+                    List {
+                        if !favoriteTools.isEmpty {
+                            Section(header: Text("Favorites").font(.caption).foregroundColor(.secondary)) {
+                                ForEach(favoriteTools, id: \.id) { tool in
+                                    ToolRowView(tool: tool)
+                                        .onTapGesture {
+                                            prefManager.incrementUsage(for: tool.id)
+                                            withAnimation(.spring()) {
+                                                selectedToolID = tool.id
+                                            }
                                         }
-                                    }
+                                        .listRowBackground(Color.clear)
+                                        .listRowSeparator(.hidden)
+                                        .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                                }
+                                .onMove(perform: prefManager.moveFavorites)
                             }
                         }
-                        .padding()
+                        
+                        let remainingTools = sortedAllTools.filter { !prefManager.isFavorite($0.id) }
+                        if !remainingTools.isEmpty {
+                            Section(header: Text(favoriteTools.isEmpty ? "All Tools" : "Other Tools").font(.caption).foregroundColor(.secondary)) {
+                                ForEach(remainingTools, id: \.id) { tool in
+                                    ToolRowView(tool: tool)
+                                        .onTapGesture {
+                                            prefManager.incrementUsage(for: tool.id)
+                                            withAnimation(.spring()) {
+                                                selectedToolID = tool.id
+                                            }
+                                        }
+                                        .listRowBackground(Color.clear)
+                                        .listRowSeparator(.hidden)
+                                        .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                                }
+                            }
+                        }
                     }
+                    .listStyle(PlainListStyle())
+                    .padding(.horizontal, 8)
                 }
                 .transition(.move(edge: .leading))
                 .id("main-list")
@@ -128,6 +161,7 @@ struct ContentView: View {
 
 struct ToolRowView: View {
     let tool: any DeveloperTool
+    @ObservedObject var prefManager = PreferenceManager.shared
     
     var body: some View {
         HStack {
@@ -145,6 +179,17 @@ struct ToolRowView: View {
             }
             
             Spacer()
+            
+            Button(action: {
+                withAnimation {
+                    prefManager.toggleFavorite(for: tool.id)
+                }
+            }) {
+                Image(systemName: prefManager.isFavorite(tool.id) ? "star.fill" : "star")
+                    .foregroundColor(prefManager.isFavorite(tool.id) ? .yellow : .secondary)
+            }
+            .buttonStyle(BorderlessButtonStyle())
+            .padding(.trailing, 4)
             
             Image(systemName: "chevron.right")
                 .foregroundColor(.secondary)
