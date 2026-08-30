@@ -19,5 +19,6 @@ class ToolRegistry: ObservableObject {
         tools.append(NetworkInfoTool())
         tools.append(URLParserTool())
         tools.append(NumberBaseConverterTool())
+        tools.append(QRCodeGeneratorTool())
     }
 }
