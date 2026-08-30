@@ -21,6 +21,7 @@ struct SettingsView: View {
 
 struct GeneralSettingsView: View {
     @AppStorage("appTheme") private var appTheme: Int = 0
+    @AppStorage("pinPopover") private var pinPopover: Bool = false
     @State private var launchAtLogin: Bool = SMAppService.mainApp.status == .enabled
     
     var body: some View {
@@ -32,6 +33,11 @@ struct GeneralSettingsView: View {
                     Text("Dark").tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
+            }
+            .padding(.bottom, 12)
+            
+            Section(header: Text("Window").font(.headline)) {
+                Toggle("Pin Popover (Stay open)", isOn: $pinPopover)
             }
             .padding(.bottom, 12)
             

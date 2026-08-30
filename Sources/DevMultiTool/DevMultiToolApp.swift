@@ -26,7 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         popover = NSPopover()
         popover.contentSize = NSSize(width: 420, height: 500)
-        popover.behavior = .transient
+        
+        let isPinned = UserDefaults.standard.bool(forKey: "pinPopover")
+        popover.behavior = isPinned ? .applicationDefined : .transient
+        
         popover.contentViewController = hostingController
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -40,9 +43,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let initialTheme = UserDefaults.standard.integer(forKey: "appTheme")
         updateTheme(initialTheme)
         
-        NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: nil, queue: .main) { _ in
+        NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: nil, queue: .main) { [weak self] _ in
             let theme = UserDefaults.standard.integer(forKey: "appTheme")
-            self.updateTheme(theme)
+            self?.updateTheme(theme)
+            
+            let isPinned = UserDefaults.standard.bool(forKey: "pinPopover")
+            self?.popover.behavior = isPinned ? .applicationDefined : .transient
         }
         
         KeyboardShortcuts.onKeyUp(for: .toggleApp) { [weak self] in

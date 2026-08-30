@@ -5,9 +5,10 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var selectedToolID: String? = nil
     
-    @State private var showHistory = false
-    
     @AppStorage("appTheme") private var appTheme: Int = 0 // 0: System, 1: Light, 2: Dark
+    @AppStorage("pinPopover") private var pinPopover: Bool = false
+    
+    @State private var showHistory = false
     
     @StateObject private var prefManager = PreferenceManager.shared
     
@@ -42,6 +43,16 @@ struct ContentView: View {
                             .textFieldStyle(PlainTextFieldStyle())
                         
                         Spacer()
+                        
+                        Button(action: {
+                            pinPopover.toggle()
+                        }) {
+                            Image(systemName: pinPopover ? "pin.fill" : "pin")
+                                .font(.system(size: 16))
+                                .foregroundColor(pinPopover ? .blue : .primary)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .help(pinPopover ? "Unpin Window" : "Pin Window")
                         
                         Button(action: {
                             appTheme = (appTheme + 1) % 3
