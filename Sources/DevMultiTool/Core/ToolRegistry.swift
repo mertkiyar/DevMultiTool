@@ -12,5 +12,6 @@ class ToolRegistry: ObservableObject {
         tools.append(JWTDecoderTool())
         tools.append(UnixTimestampTool())
         tools.append(URLEncoderTool())
+        tools.append(ColorConverterTool())
     }
 }
