@@ -10,6 +10,10 @@ struct DevMultiToolApp: App {
             ContentView()
         }
         .menuBarExtraStyle(.window)
+        
+        Settings {
+            SettingsView()
+        }
     }
 }
 

@@ -164,6 +164,29 @@ struct ContentView: View {
             }
         }
         .frame(width: 420, height: 500)
+        .overlay(
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Menu {
+                        Button("Settings...") {
+                            NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+                        }
+                        Divider()
+                        Button("Quit DevMultiTool") {
+                            NSApplication.shared.terminate(nil)
+                        }
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                            .foregroundColor(.secondary)
+                    }
+                    .menuStyle(BorderlessButtonMenuStyle())
+                    .frame(width: 32)
+                }
+                .padding(8)
+            }
+        )
         .onAppear {
             updateTheme(appTheme)
         }
