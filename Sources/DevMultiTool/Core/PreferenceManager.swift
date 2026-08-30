@@ -41,4 +41,9 @@ class PreferenceManager: ObservableObject {
     func isFavorite(_ toolID: String) -> Bool {
         return favoriteToolIDs.contains(toolID)
     }
+    
+    func resetAllData() {
+        favoriteToolIDs.removeAll()
+        toolUsageCounts.removeAll()
+    }
 }

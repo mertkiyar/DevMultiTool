@@ -23,6 +23,8 @@ struct GeneralSettingsView: View {
     @AppStorage("appTheme") private var appTheme: Int = 0
     @AppStorage("pinPopover") private var pinPopover: Bool = false
     @State private var launchAtLogin: Bool = SMAppService.mainApp.status == .enabled
+    @State private var showResetAlert = false
+    @StateObject private var prefManager = PreferenceManager.shared
     
     var body: some View {
         Form {
@@ -69,8 +71,29 @@ struct GeneralSettingsView: View {
                     KeyboardShortcuts.Recorder(for: .toggleApp)
                 }
             }
+            .padding(.bottom, 12)
+            
+            Section(header: Text("Data Management").font(.headline)) {
+                Button(action: {
+                    showResetAlert = true
+                }) {
+                    Text("Reset Preferences")
+                        .foregroundColor(.red)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
         }
         .padding(20)
+        .alert(isPresented: $showResetAlert) {
+            Alert(
+                title: Text("Reset Data?"),
+                message: Text("This will clear your favorites and tool usage history. This action cannot be undone."),
+                primaryButton: .destructive(Text("Reset")) {
+                    prefManager.resetAllData()
+                },
+                secondaryButton: .cancel()
+            )
+        }
         .onAppear {
             let isEnabled = SMAppService.mainApp.status == .enabled
             if launchAtLogin != isEnabled {
