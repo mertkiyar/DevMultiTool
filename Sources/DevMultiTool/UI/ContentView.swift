@@ -147,7 +147,23 @@ struct ContentView: View {
             }
         }
         .frame(width: 420, height: 500)
-        .preferredColorScheme(appTheme == 1 ? .light : (appTheme == 2 ? .dark : nil))
+        .onAppear {
+            updateTheme(appTheme)
+        }
+        .onChange(of: appTheme) { newValue in
+            updateTheme(newValue)
+        }
+    }
+    
+    private func updateTheme(_ theme: Int) {
+        switch theme {
+        case 1:
+            NSApp.appearance = NSAppearance(named: .aqua)
+        case 2:
+            NSApp.appearance = NSAppearance(named: .darkAqua)
+        default:
+            NSApp.appearance = nil
+        }
     }
     
     private var themeIcon: String {
