@@ -4,6 +4,7 @@ enum ToolCategory: String, CaseIterable, Identifiable {
     case generator = "Generators"
     case converter = "Converters"
     case formatter = "Formatters"
+    case inspector = "Inspectors"
     
     var id: String { self.rawValue }
 }

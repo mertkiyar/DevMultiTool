@@ -15,5 +15,6 @@ class ToolRegistry: ObservableObject {
         tools.append(ColorConverterTool())
         tools.append(JSONFormatterTool())
         tools.append(HashGeneratorTool())
+        tools.append(StringInspectorTool())
     }
 }
