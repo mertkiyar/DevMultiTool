@@ -10,5 +10,6 @@ class ToolRegistry: ObservableObject {
         tools.append(JSONToCSVTool())
         tools.append(JSONFillerTool())
         tools.append(JWTDecoderTool())
+        tools.append(UnixTimestampTool())
     }
 }
