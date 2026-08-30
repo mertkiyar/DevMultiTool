@@ -20,7 +20,7 @@ struct SettingsView: View {
 
 struct GeneralSettingsView: View {
     @AppStorage("appTheme") private var appTheme: Int = 0
-    @AppStorage("launchAtLogin") private var launchAtLogin = false
+    @State private var launchAtLogin: Bool = SMAppService.mainApp.status == .enabled
     
     var body: some View {
         Form {
@@ -37,17 +37,30 @@ struct GeneralSettingsView: View {
             Section(header: Text("System").font(.headline)) {
                 Toggle("Launch at login", isOn: $launchAtLogin)
                     .onChange(of: launchAtLogin) { newValue in
-                        if newValue {
-                            try? SMAppService.mainApp.register()
-                        } else {
-                            try? SMAppService.mainApp.unregister()
+                        do {
+                            if newValue {
+                                if SMAppService.mainApp.status != .enabled {
+                                    try SMAppService.mainApp.register()
+                                }
+                            } else {
+                                if SMAppService.mainApp.status == .enabled {
+                                    try SMAppService.mainApp.unregister()
+                                }
+                            }
+                        } catch {
+                            print("SMAppService Error: \(error)")
+                            // Revert if failed
+                            launchAtLogin = SMAppService.mainApp.status == .enabled
                         }
                     }
             }
         }
         .padding(20)
         .onAppear {
-            launchAtLogin = SMAppService.mainApp.status == .enabled
+            let isEnabled = SMAppService.mainApp.status == .enabled
+            if launchAtLogin != isEnabled {
+                launchAtLogin = isEnabled
+            }
         }
     }
 }
