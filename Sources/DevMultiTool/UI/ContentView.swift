@@ -169,6 +169,13 @@ struct ContentView: View {
         .onChange(of: appTheme) { newValue in
             updateTheme(newValue)
         }
+        .alert(isPresented: $prefManager.showFavoriteLimitAlert) {
+            Alert(
+                title: Text("Limit Reached"),
+                message: Text("You can only have up to 3 favorites."),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
     
     private func updateTheme(_ theme: Int) {

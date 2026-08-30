@@ -15,6 +15,8 @@ class PreferenceManager: ObservableObject {
         }
     }
     
+    @Published var showFavoriteLimitAlert: Bool = false
+    
     init() {
         self.favoriteToolIDs = UserDefaults.standard.stringArray(forKey: "favoriteToolIDs") ?? []
         self.toolUsageCounts = UserDefaults.standard.dictionary(forKey: "toolUsageCounts") as? [String: Int] ?? [:]
@@ -28,9 +30,10 @@ class PreferenceManager: ObservableObject {
         if let index = favoriteToolIDs.firstIndex(of: toolID) {
             favoriteToolIDs.remove(at: index)
         } else {
-            favoriteToolIDs.append(toolID)
-            if favoriteToolIDs.count > 3 {
-                favoriteToolIDs.removeFirst()
+            if favoriteToolIDs.count >= 3 {
+                showFavoriteLimitAlert = true
+            } else {
+                favoriteToolIDs.append(toolID)
             }
         }
     }

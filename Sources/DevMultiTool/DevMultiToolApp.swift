@@ -15,6 +15,7 @@ struct DevMultiToolApp: App {
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     var popover: NSPopover!
+    var settingsWindow: NSWindow?
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
@@ -56,10 +57,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func showSettings() {
-        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
         if popover.isShown {
             popover.performClose(nil)
         }
+        
+        if settingsWindow == nil {
+            settingsWindow = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 400, height: 250),
+                styleMask: [.titled, .closable],
+                backing: .buffered,
+                defer: false
+            )
+            settingsWindow?.center()
+            settingsWindow?.setFrameAutosaveName("Settings")
+            settingsWindow?.isReleasedWhenClosed = false
+            settingsWindow?.contentView = NSHostingView(rootView: SettingsView())
+            settingsWindow?.title = "DevMultiTool Settings"
+        }
+        
+        settingsWindow?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
     }
     
