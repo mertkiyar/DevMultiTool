@@ -1,0 +1,424 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.DevMultiTool-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/sources",
+      "importPath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/DeveloperTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/HistoryManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "DevMultiTool",
+      "moduleOutputPath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/Modules/DevMultiTool.swiftmodule",
+      "objects" : [
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DeveloperTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryManager.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ToolRegistry.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DevMultiToolApp.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.swift.o",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "DevMultiTool_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "devmultitool"
+      ],
+      "outputFileMapPath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DeveloperTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ToolRegistry.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DevMultiToolApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/Modules/DevMultiTool.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/DeveloperTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/HistoryManager.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift",
+        "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift"
+      ],
+      "tempsPath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "DevMultiTool" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DevMultiTool",
+      "-package-name",
+      "devmultitool",
+      "-c",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/DeveloperTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/HistoryManager.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift",
+      "-I",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "DevMultiTool_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "devmultitool",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "DevMultiTool" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool-entitlement.plist"
+    },
+    "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/DeveloperTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/HistoryManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Core/ToolRegistry.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/DevMultiToolApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/Base64ConverterTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/SampleTextTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/UUIDGeneratorTool.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/UI/HistoryView.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/sources"
+    },
+    "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DevMultiToolApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/DeveloperTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/HistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/SampleTextTool.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/ToolRegistry.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/UUIDGeneratorTool.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.product/Objects.LinkFileList"
+    },
+    "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

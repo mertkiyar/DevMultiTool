@@ -92,6 +92,7 @@ struct ContentView: View {
                         Divider()
                         
                         tool.view
+                            .padding()
                     }
                     .transition(.move(edge: .trailing))
                 }
