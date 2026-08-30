@@ -65,7 +65,7 @@ struct ContentView: View {
             } else {
                 if let tool = registry.tools.first(where: { $0.id == selectedToolID }) {
                     VStack(alignment: .leading, spacing: 0) {
-                        HStack {
+                        HStack(spacing: 16) {
                             Button(action: {
                                 withAnimation(.spring()) {
                                     selectedToolID = nil
@@ -78,8 +78,6 @@ struct ContentView: View {
                             }
                             .buttonStyle(PlainButtonStyle())
                             .foregroundColor(.blue)
-                            
-                            Spacer()
                             
                             Text(tool.name)
                                 .font(.headline)

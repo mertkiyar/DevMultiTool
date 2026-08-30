@@ -8,7 +8,7 @@ struct HistoryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // Header
-            HStack {
+            HStack(spacing: 16) {
                 Button(action: {
                     withAnimation {
                         showHistory = false
@@ -21,8 +21,6 @@ struct HistoryView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.blue)
-                
-                Spacer()
                 
                 Text("History")
                     .font(.headline)

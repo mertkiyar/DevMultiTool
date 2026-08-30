@@ -149,7 +149,11 @@ struct RandomValueButton: View {
     
     @State private var isNumber = false
     @State private var length = 8
-    @State private var isUppercase = false
+    
+    @State private var useLowercase = true
+    @State private var useUppercase = true
+    @State private var useNumbers = false
+    @State private var useSpecial = false
     
     var body: some View {
         Button(action: {
@@ -171,17 +175,22 @@ struct RandomValueButton: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 
-                Stepper("Length: \(length)", value: $length, in: 1...32)
+                Stepper("Length: \(length)", value: $length, in: 1...64)
                 
                 if !isNumber {
-                    Toggle("Uppercase", isOn: $isUppercase)
+                    VStack(alignment: .leading, spacing: 6) {
+                        Toggle("Lowercase (a-z)", isOn: $useLowercase)
+                        Toggle("Uppercase (A-Z)", isOn: $useUppercase)
+                        Toggle("Numbers (0-9)", isOn: $useNumbers)
+                        Toggle("Special (!@#...)", isOn: $useSpecial)
+                    }
                 }
                 
                 Button("Generate") {
                     if isNumber {
                         field.value = generateNumber(length: length)
                     } else {
-                        field.value = generateString(length: length, uppercase: isUppercase)
+                        field.value = generateString(length: length)
                     }
                     showPopover = false
                 }
@@ -199,12 +208,18 @@ struct RandomValueButton: View {
     
     private func generateNumber(length: Int) -> String {
         let digits = "0123456789"
-        // To avoid starting with 0 if possible, but random digits is fine for mock.
         return String((0..<length).map { _ in digits.randomElement()! })
     }
     
-    private func generateString(length: Int, uppercase: Bool) -> String {
-        let chars = uppercase ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : "abcdefghijklmnopqrstuvwxyz"
+    private func generateString(length: Int) -> String {
+        var chars = ""
+        if useLowercase { chars += "abcdefghijklmnopqrstuvwxyz" }
+        if useUppercase { chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }
+        if useNumbers   { chars += "0123456789" }
+        if useSpecial   { chars += "!@#$%^&*()-_=+[]{}|;:,.<>?" }
+        
+        if chars.isEmpty { chars = "abcdefghijklmnopqrstuvwxyz" }
+        
         return String((0..<length).map { _ in chars.randomElement()! })
     }
 }

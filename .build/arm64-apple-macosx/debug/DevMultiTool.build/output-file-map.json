@@ -37,6 +37,13 @@
     "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.swiftdeps",
     "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/Base64ConverterTool.dia"
   },
+  "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONFillerTool.swift": {
+    "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.d",
+    "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swift.o",
+    "swiftmodule": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool~partial.swiftmodule",
+    "swift-dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.swiftdeps",
+    "diagnostics": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONFillerTool.dia"
+  },
   "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/Sources/DevMultiTool/Tools/JSONToCSVTool.swift": {
     "dependencies": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.d",
     "object": "/Users/mertkiyar/.gemini/antigravity-ide/scratch/DevMultiTool/.build/arm64-apple-macosx/debug/DevMultiTool.build/JSONToCSVTool.swift.o",
