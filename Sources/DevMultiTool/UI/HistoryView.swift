@@ -37,7 +37,7 @@ struct HistoryView: View {
                 .help("Clear History")
             }
             .padding()
-            .background(Color(NSColor.controlBackgroundColor))
+            .background(.regularMaterial)
             
             Divider()
             
