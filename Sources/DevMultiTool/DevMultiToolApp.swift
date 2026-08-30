@@ -46,14 +46,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func updateTheme(_ theme: Int) {
+        let appearance: NSAppearance?
         switch theme {
         case 1:
-            NSApp.appearance = NSAppearance(named: .aqua)
+            appearance = NSAppearance(named: .aqua)
         case 2:
-            NSApp.appearance = NSAppearance(named: .darkAqua)
+            appearance = NSAppearance(named: .darkAqua)
         default:
-            NSApp.appearance = nil
+            appearance = nil
         }
+        
+        NSApp.appearance = appearance
+        popover?.appearance = appearance
+        settingsWindow?.appearance = appearance
     }
     
     @objc func togglePopover(_ sender: NSStatusBarButton) {
