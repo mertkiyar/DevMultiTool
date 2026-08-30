@@ -5,6 +5,7 @@ enum ToolCategory: String, CaseIterable, Identifiable {
     case converter = "Converters"
     case formatter = "Formatters"
     case inspector = "Inspectors"
+    case network = "Network"
     
     var id: String { self.rawValue }
 }
