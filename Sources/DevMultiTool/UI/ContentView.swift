@@ -17,35 +17,35 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .foregroundColor(.secondary)
-                TextField("Search tools...", text: $searchText)
-                    .textFieldStyle(PlainTextFieldStyle())
-                
-                Spacer()
-                
-                Button(action: {
-                    withAnimation {
-                        showHistory.toggle()
-                        selectedToolID = nil
-                    }
-                }) {
-                    Image(systemName: "clock.arrow.circlepath")
-                        .font(.system(size: 16))
-                }
-                .buttonStyle(PlainButtonStyle())
-                .help("History")
-            }
-            .padding()
-            .background(Color(NSColor.controlBackgroundColor))
-            
-            Divider()
-            
             if showHistory {
                 HistoryView(showHistory: $showHistory)
                     .transition(.move(edge: .bottom))
             } else if selectedToolID == nil {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.secondary)
+                    TextField("Search tools...", text: $searchText)
+                        .textFieldStyle(PlainTextFieldStyle())
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            showHistory.toggle()
+                            selectedToolID = nil
+                        }
+                    }) {
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.system(size: 16))
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .help("History")
+                }
+                .padding()
+                .background(Color(NSColor.controlBackgroundColor))
+                
+                Divider()
+                
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 8) {
                         ForEach(filteredTools, id: \.id) { tool in
