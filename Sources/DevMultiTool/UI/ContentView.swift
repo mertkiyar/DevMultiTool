@@ -75,7 +75,7 @@ struct ContentView: View {
                                 if searchText.isEmpty {
                                     ForEach(prefManager.favoriteToolIDs, id: \.self) { toolID in
                                         if let tool = registry.tools.first(where: { $0.id == toolID }) {
-                                            ToolRowView(tool: tool, isFavoriteSection: true)
+                                            ToolRowView(tool: tool)
                                                 .onTapGesture {
                                                     prefManager.incrementUsage(for: tool.id)
                                                     withAnimation(.spring()) {
@@ -87,10 +87,9 @@ struct ContentView: View {
                                                 .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
                                         }
                                     }
-                                    .onMove(perform: prefManager.moveFavorites)
                                 } else {
                                     ForEach(favoriteTools, id: \.id) { tool in
-                                        ToolRowView(tool: tool, isFavoriteSection: false)
+                                        ToolRowView(tool: tool)
                                             .onTapGesture {
                                                 prefManager.incrementUsage(for: tool.id)
                                                 withAnimation(.spring()) {
@@ -218,17 +217,9 @@ struct ContentView: View {
 struct ToolRowView: View {
     let tool: any DeveloperTool
     @ObservedObject var prefManager = PreferenceManager.shared
-    var isFavoriteSection: Bool = false
     
     var body: some View {
         HStack {
-            if isFavoriteSection && prefManager.favoriteToolIDs.count > 1 {
-                Image(systemName: "line.3.horizontal")
-                    .foregroundColor(.secondary.opacity(0.5))
-                    .font(.system(size: 14))
-                    .padding(.trailing, 2)
-            }
-            
             Image(systemName: tool.iconName)
                 .frame(width: 30)
                 .foregroundColor(.blue)

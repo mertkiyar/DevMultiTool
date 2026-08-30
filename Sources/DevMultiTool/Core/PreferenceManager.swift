@@ -29,13 +29,10 @@ class PreferenceManager: ObservableObject {
             favoriteToolIDs.remove(at: index)
         } else {
             favoriteToolIDs.append(toolID)
+            if favoriteToolIDs.count > 3 {
+                favoriteToolIDs.removeFirst()
+            }
         }
-    }
-    
-    func moveFavorites(from source: IndexSet, to destination: Int) {
-        var copy = favoriteToolIDs
-        copy.move(fromOffsets: source, toOffset: destination)
-        favoriteToolIDs = copy
     }
     
     func isFavorite(_ toolID: String) -> Bool {
