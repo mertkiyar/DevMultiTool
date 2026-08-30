@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import KeyboardShortcuts
 
 @main
 struct DevMultiToolApp: App {
@@ -42,6 +43,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: nil, queue: .main) { _ in
             let theme = UserDefaults.standard.integer(forKey: "appTheme")
             self.updateTheme(theme)
+        }
+        
+        KeyboardShortcuts.onKeyUp(for: .toggleApp) { [weak self] in
+            self?.togglePopoverFromHotkey()
+        }
+    }
+    
+    private func togglePopoverFromHotkey() {
+        if popover.isShown {
+            popover.performClose(nil)
+        } else {
+            if let button = statusItem.button {
+                popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+                popover.contentViewController?.view.window?.makeKey()
+                NSApp.activate(ignoringOtherApps: true)
+            }
         }
     }
     

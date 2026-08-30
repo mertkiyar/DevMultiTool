@@ -1,5 +1,6 @@
 import SwiftUI
 import ServiceManagement
+import KeyboardShortcuts
 
 struct SettingsView: View {
     var body: some View {
@@ -49,10 +50,18 @@ struct GeneralSettingsView: View {
                             }
                         } catch {
                             print("SMAppService Error: \(error)")
-                            // Revert if failed
                             launchAtLogin = SMAppService.mainApp.status == .enabled
                         }
                     }
+            }
+            .padding(.bottom, 12)
+            
+            Section(header: Text("Global Shortcut").font(.headline)) {
+                HStack {
+                    Text("Toggle App")
+                    Spacer()
+                    KeyboardShortcuts.Recorder(for: .toggleApp)
+                }
             }
         }
         .padding(20)
