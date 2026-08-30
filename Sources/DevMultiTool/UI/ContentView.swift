@@ -65,7 +65,7 @@ struct ContentView: View {
                         .help("History")
                     }
                     .padding()
-                    .background(.regularMaterial)
+                    .background(Color(NSColor.controlBackgroundColor))
                     
                     Divider()
                     
@@ -150,7 +150,7 @@ struct ContentView: View {
                             Spacer()
                         }
                         .padding()
-                        .background(.regularMaterial)
+                        .background(Color(NSColor.controlBackgroundColor))
                         
                         Divider()
                         
@@ -163,29 +163,12 @@ struct ContentView: View {
             }
         }
         .frame(width: 420, height: 500)
-        .onAppear {
-            updateTheme(appTheme)
-        }
-        .onChange(of: appTheme) { newValue in
-            updateTheme(newValue)
-        }
         .alert(isPresented: $prefManager.showFavoriteLimitAlert) {
             Alert(
                 title: Text("Limit Reached"),
                 message: Text("You can only have up to 3 favorites."),
                 dismissButton: .default(Text("OK"))
             )
-        }
-    }
-    
-    private func updateTheme(_ theme: Int) {
-        switch theme {
-        case 1:
-            NSApp.appearance = NSAppearance(named: .aqua)
-        case 2:
-            NSApp.appearance = NSAppearance(named: .darkAqua)
-        default:
-            NSApp.appearance = nil
         }
     }
     
@@ -235,7 +218,7 @@ struct ToolRowView: View {
                 .font(.system(size: 12))
         }
         .padding(12)
-        .background(.regularMaterial)
+        .background(Color(NSColor.controlBackgroundColor).opacity(0.8))
         .cornerRadius(8)
         .contentShape(Rectangle())
     }

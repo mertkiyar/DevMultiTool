@@ -31,9 +31,6 @@ struct GeneralSettingsView: View {
                     Text("Dark").tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
-                .onChange(of: appTheme) { newValue in
-                    updateTheme(newValue)
-                }
             }
             .padding(.bottom, 12)
             
@@ -51,17 +48,6 @@ struct GeneralSettingsView: View {
         .padding(20)
         .onAppear {
             launchAtLogin = SMAppService.mainApp.status == .enabled
-        }
-    }
-    
-    private func updateTheme(_ theme: Int) {
-        switch theme {
-        case 1:
-            NSApp.appearance = NSAppearance(named: .aqua)
-        case 2:
-            NSApp.appearance = NSAppearance(named: .darkAqua)
-        default:
-            NSApp.appearance = nil
         }
     }
 }

@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover = NSPopover()
         popover.contentSize = NSSize(width: 420, height: 500)
         popover.behavior = .transient
+        popover.animates = false // Prevent jumping animations on macOS 14+ when opening
         popover.contentViewController = NSHostingController(rootView: ContentView())
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -31,6 +32,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(systemSymbolName: "hammer.fill", accessibilityDescription: "DevMultiTool")
             button.action = #selector(togglePopover(_:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+        }
+        
+        let initialTheme = UserDefaults.standard.integer(forKey: "appTheme")
+        updateTheme(initialTheme)
+        
+        NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: nil, queue: .main) { _ in
+            let theme = UserDefaults.standard.integer(forKey: "appTheme")
+            self.updateTheme(theme)
+        }
+    }
+    
+    private func updateTheme(_ theme: Int) {
+        switch theme {
+        case 1:
+            NSApp.appearance = NSAppearance(named: .aqua)
+        case 2:
+            NSApp.appearance = NSAppearance(named: .darkAqua)
+        default:
+            NSApp.appearance = nil
         }
     }
     
